@@ -3,7 +3,7 @@
 // Для вирішення цієї задачі вам буде потрібно згадати про перетворення у рядочкі та числа,
 //  а також використати декілька методів масивів, які ми розбирали на вебінарі:
 
-const currentMaxValue = 9854;
+const currentMaxValue = 4589;
 let reverseMaxValue;
 
 // reverseMaxValue = String(currentMaxValue).split("").join("");
