@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Сourse Project</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240708202053" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css?_v=20240708202053" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        <section class="section__app app">
+          <div class="app__container">
+            <div class="app__language-switcher">
+              <label for="language-select">Language:</label>
+              <select id="language-select">
+                <option value="en">English</option>
+                <option value="uk">Українська</option>
+              </select>
+            </div>
+            <div class="app__tabs">
+              <button class="app__tab-btn active" data-tab="tab-calculate-interval">Calculate Interval</button>
+              <button class="app__tab-btn" data-tab="tab-holidays">Holidays</button>
+            </div>
+            <div id="tab-calculate-interval" class="app__calculate-interval calculate-interval-app">
+              <h2 class="calculate-interval-app__title title">Calculate Time Interval</h2>
+              <div class="calculate-interval-app__form form-calculate-interval-app form">
+                <div class="form-calculate-interval-app__line form__line">
+                  <label for="start-date" class="form-calculate-interval-app__label form__label">Start Date:</label>
+                  <input type="date" id="start-date" class="form-calculate-interval-app__input form__input" />
+                </div>
+                <div class="form-calculate-interval-app__line form__line">
+                  <label for="end-date" class="form-calculate-interval-app__label form__label">End Date:</label>
+                  <input type="date" id="end-date" class="form-calculate-interval-app__input form__input" disabled />
+                </div>
+                <div class="form-calculate-interval-line form__line">
+                  <label for="interval-preset" class="form-calculate-interval-app__label form__label">Interval Preset:</label>
+                  <select id="interval-preset" class="form-calculate-interval-app__select form__select">
+                    <option value="week">Week (7 days)</option>
+                    <option value="month">Month (30 days)</option>
+                  </select>
+                </div>
+                <div class="form-calculate-interval-app__line form__line">
+                  <label for="day-type" class="form-calculate-interval-app__label form__label">Day Type:</label>
+                  <select id="day-type" class="form-calculate-interval-app__select form__select">
+                    <option value="all">All Days</option>
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                  </select>
+                </div>
+                <div class="form-calculate-interval-app__line form__line">
+                  <label for="count-options" class="form-calculate-interval-app__label form__label">Count Options:</label>
+                  <select id="count-options" class="form-calculate-interval-app__select form__select">
+                    <option value="days">Days</option>
+                    <option value="hours">Hours</option>
+                    <option value="minutes">Minutes</option>
+                    <option value="seconds">Seconds</option>
+                  </select>
+                </div>
+                <button id="calculate-btn" class="calculate-interval-app__btn app__btn">Calculate</button>
+              </div>
+              <div id="interval-results" class="calculate-interval-app__results results"></div>
+            </div>
+            <div id="tab-holidays" class="app__holidays holidays-app hidden">
+              <h2 class="holidays-app__title title">Holiday List</h2>
+              <div class="holidays-app__form form">
+                <div class="holidays-app__form-line form__line">
+                  <label for="country-select" class="holidays-app__form-label form__label">Select Country:</label>
+                  <select id="country-select" class="holidays-app__form-select form__select"></select>
+                </div>
+                <div class="holidays-app__form-line form__line">
+                  <label for="year-select" class="holidays-app__form-label form__label">Select Year:</label>
+                  <select id="year-select" class="holidays-app__form-select form__select" disabled></select>
+                </div>
+                <button id="fetch-holidays-btn" class="holidays-app__btn app__btn">Fetch Holidays</button>
+              </div>
+              <div id="holiday-results" class="holidays-app__results results"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/app.min.js?_v=20240708202053"></script>
+  </body>
+</html>
